@@ -1,0 +1,36 @@
+﻿server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/api/auth/**
+        - id: menu-service
+          uri: lb://MENU-SERVICE
+          predicates:
+            - Path=/api/menu/**
+        - id: stock-service
+          uri: lb://STOCK-SERVICE
+          predicates:
+            - Path=/api/stock/**
+        - id: commande-service
+          uri: lb://COMMANDE-SERVICE
+          predicates:
+            - Path=/api/commandes/**
+        - id: planning-service
+          uri: lb://PLANNING-SERVICE
+          predicates:
+            - Path=/api/planning/**
+        - id: statistiques-service
+          uri: lb://STATISTIQUES-SERVICE
+          predicates:
+            - Path=/api/statistiques/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
