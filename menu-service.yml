@@ -2,6 +2,8 @@
   port: 8083
 
 spring:
+  application:
+    name: menu-service
   datasource:
     url: jdbc:mysql://localhost:3309/db_menu?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root

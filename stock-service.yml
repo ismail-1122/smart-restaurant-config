@@ -2,6 +2,8 @@
   port: 8084
 
 spring:
+  application:
+    name: stock-service
   datasource:
     url: jdbc:mysql://localhost:3310/db_stock?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root

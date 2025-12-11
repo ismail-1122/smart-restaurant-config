@@ -2,6 +2,8 @@
   port: 8082
 
 spring:
+  application:
+    name: commande-service
   datasource:
     url: jdbc:mysql://localhost:3308/db_commande?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root

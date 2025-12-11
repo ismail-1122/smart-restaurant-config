@@ -2,6 +2,8 @@
   port: 8086
 
 spring:
+  application:
+    name: statistiques-service
   datasource:
     url: jdbc:mysql://localhost:3312/db_statistiques?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
