@@ -2,6 +2,8 @@
   port: 8081
 
 spring:
+  application:
+    name: auth-service
   datasource:
     url: jdbc:mysql://localhost:3307/db_auth?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
