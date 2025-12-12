@@ -6,9 +6,11 @@ spring:
     gateway:
       routes:
         - id: auth-service
-          uri: lb://AUTH-SERVICE
+          uri: http://localhost:8081
           predicates:
             - Path=/api/auth/**
+          filters:
+            - StripPrefix=1
         - id: menu-service
           uri: lb://MENU-SERVICE
           predicates:
