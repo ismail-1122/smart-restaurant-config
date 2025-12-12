@@ -12,9 +12,11 @@ spring:
           filters:
             - StripPrefix=1
         - id: menu-service
-          uri: lb://MENU-SERVICE
+          uri: http://localhost:8083
           predicates:
-            - Path=/api/menu/**
+            - Path=/api/menus/**
+          filters:
+            - StripPrefix=1
         - id: stock-service
           uri: lb://STOCK-SERVICE
           predicates:
